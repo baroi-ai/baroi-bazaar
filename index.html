@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baroi Bazaar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#34393f] text-white font-sans">
+
+    <!-- Navbar -->
+    <header class="bg-[#1b1e23] p-5 flex justify-between items-center rounded-b-xl shadow-lg">
+        <!-- Logo and Site Name -->
+        <div class="flex items-center">
+            <img src="logos.png" alt="Baroi Bazaar Logo" class="h-8 w-8 mr-3">
+            <h1 class="text-teal-400 font-bold text-xl">Baroi Bazaar</h1>
+        </div>
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-6 text-teal-300 font-medium">
+            <a href="#" class="hover:text-white">Products</a>
+            <a href="#" class="hover:text-white">About Me</a>
+            <a href="#" class="hover:text-white">Contact</a>
+        </nav>
+        <!-- Mobile Menu Button (Hamburger) -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-teal-300 hover:text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Links -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#1b1e23] rounded-b-xl shadow-lg">
+        <a href="#" class="block py-3 px-5 text-teal-300 hover:bg-[#24272d] hover:text-white">Products</a>
+        <a href="#" class="block py-3 px-5 text-teal-300 hover:bg-[#24272d] hover:text-white">About Me</a>
+        <a href="#" class="block py-3 px-5 text-teal-300 hover:bg-[#24272d] hover:text-white">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="text-center py-12 px-4">
+        <h2 class="text-3xl font-bold text-teal-400">Discover Amazing Deals!</h2>
+        <div class="flex space-x-6 justify-center mt-2">
+            <a href="https://www.instagram.com/baroi.ai/" target="_blank" class="text-teal-400 hover:text-white">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.343 2.525c.636-.247 1.363.416 2.427-.465C9.793 2.013 10.147 2 12.315 2zm0 1.622c-2.403 0-2.748.01-3.725.058-.948.045-1.542.208-2.068.42a3.287 3.287 0 00-1.18 1.18c-.212.526-.375 1.12-.42 2.068-.048.977-.058 1.322-.058 3.725s.01 2.748.058 3.725c.045.948.208 1.542.42 2.068a3.287 3.287 0 001.18 1.18c.526.212 1.12.375 2.068.42.977.048 1.322.058 3.725.058s2.748-.01 3.725-.058c.948-.045 1.542-.208 2.068-.42a3.287 3.287 0 001.18-1.18c.212-.526.375-1.12.42-2.068.048-.977.058-1.322.058-3.725s-.01-2.748-.058-3.725c-.045-.948-.208-1.542-.42-2.068a3.287 3.287 0 00-1.18-1.18c-.526-.212-1.12-.375-2.068-.42-.977-.048-1.322-.058-3.725-.058zM12 8.118a3.882 3.882 0 100 7.764 3.882 3.882 0 000-7.764zm0 6.138a2.256 2.256 0 110-4.512 2.256 2.256 0 010 4.512zM16.882 6.118a.952.952 0 100 1.904 .952.952 0 000-1.904z"
+                        clip-rule="evenodd" />
+                </svg>
+            </a>
+            <a href="https://www.youtube.com/@baroi_ai" target="_blank" class="text-teal-400 hover:text-white">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.78 22 12 22 12s0 3.22-.42 4.814a2.506 2.506 0 01-1.768 1.768c-1.594.42-7.812.42-7.812.42s-6.218 0-7.812-.42a2.506 2.506 0 01-1.768-1.768C2 15.22 2 12 2 12s0-3.22.42-4.814a2.506 2.506 0 011.768-1.768C5.782 5 12 5 12 5s6.218 0 7.812.418zM9.75 15.5V8.5l6 3.5-6 3.5z"
+                        clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
+        <p class="text-gray-400 mt-3">This site contains product affiliate links. We may receive a commission if you
+            make a purchase from this links</p>
+        <!-- Search Bar with ID -->
+        <div class="mt-8 flex justify-center">
+            <div class="relative w-full max-w-lg">
+                <input id="search-input" type="text" placeholder="Search for products..."
+                    class="w-full bg-[#24272d] text-white rounded-full py-3 pl-5 pr-12 focus:outline-none focus:ring-2 focus:ring-teal-400">
+                <button class="absolute inset-y-0 right-0 flex items-center pr-4">
+                    <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products-grid" class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 pb-12">
+        <!-- Product 1 with a new class -->
+        <div
+            class="product-card bg-[#24272d] rounded-2xl p-5 shadow-md flex flex-col transition-transform duration-300 hover:scale-105">
+            <div class="relative h-48 mb-4">
+                <img src="hone.png" alt="Product" class="absolute h-full w-full object-contain rounded-lg">
+            </div>
+            <h3 class="text-lg font-bold">Awesome Gadget Pro</h3>
+            <p class="text-teal-400 font-bold">$99.99</p>
+            <div class="text-yellow-400 mb-2">★★★★☆</div>
+            <p class="text-gray-400 text-sm mb-4 h-12 overflow-hidden">Onrer ipare dolor t lner tranty. Rowd in unet oe
+                mcility.</p>
+            <button class="bg-teal-400 hover:bg-teal-500 text-black font-semibold px-4 py-2 rounded-lg mt-auto">Buy
+                Now</button>
+        </div>
+        <!-- Product 2 with a new class -->
+        <div
+            class="product-card bg-[#24272d] rounded-2xl p-5 shadow-md flex flex-col transition-transform duration-300 hover:scale-105">
+            <div class="relative h-48 mb-4">
+                <img src="ipord-.png" alt="Product" class="absolute h-full w-full object-contain rounded-lg">
+            </div>
+            <h3 class="text-lg font-bold">Smart Home Assistant</h3>
+            <p class="text-teal-400 font-bold">$149.99</p>
+            <div class="text-yellow-400 mb-2">★★★★★</div>
+            <p class="text-gray-400 text-sm mb-4 h-12 overflow-hidden">Onrer ipare dolor t lner tranty. Rowd in en oh
+                mcility.</p>
+            <button class="bg-teal-400 hover:bg-teal-500 text-black font-semibold px-4 py-2 rounded-lg mt-auto">Buy
+                Now</button>
+        </div>
+        <!-- Product 3 with a new class -->
+        <div
+            class="product-card bg-[#24272d] rounded-2xl p-5 shadow-md flex flex-col transition-transform duration-300 hover:scale-105">
+            <div class="relative h-48 mb-4">
+                <img src="headhone.png" alt="Product" class="absolute h-full w-full object-contain rounded-lg">
+            </div>
+            <h3 class="text-lg font-bold">Wireless Noise-Cancelling Headphones</h3>
+            <p class="text-teal-400 font-bold">$199.99</p>
+            <div class="text-yellow-400 mb-2">★★★★★</div>
+            <p class="text-gray-400 text-sm mb-4 h-12 overflow-hidden">Onrer ipare dolor t lner tranty. Rowd in unch oe
+                mcility.</p>
+            <button class="bg-teal-400 hover:bg-teal-500 text-black font-semibold px-4 py-2 rounded-lg mt-auto">Buy
+                Now</button>
+        </div>
+        <!-- Product 4 with a new class -->
+        <div
+            class="product-card bg-[#24272d] rounded-2xl p-5 shadow-md flex flex-col transition-transform duration-300 hover:scale-105">
+            <div class="relative h-48 mb-4">
+                <img src="jucier.png" alt="Product" class="absolute h-full w-full object-contain rounded-lg">
+            </div>
+            <h3 class="text-lg font-bold">Another Great Gadget</h3>
+            <p class="text-teal-400 font-bold">$129.99</p>
+            <div class="text-yellow-400 mb-2">★★★★☆</div>
+            <p class="text-gray-400 text-sm mb-4 h-12 overflow-hidden">Onrer ipare dolor t lner tranty. Rowd in unet oe
+                mcility.</p>
+            <button class="bg-teal-400 hover:bg-teal-500 text-black font-semibold px-4 py-2 rounded-lg mt-auto">Buy
+                Now</button>
+        </div>
+    </section>
+
+    <!-- "No Results" Message -->
+    <div id="no-results-message" class="text-center text-gray-400 py-10 hidden">
+        <h3 class="text-xl font-bold">No products found</h3>
+        <p>Try a different search term.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#1c1f24] p-5 flex justify-between items-center rounded-t-xl shadow-lg">
+        <p class="text-gray-400 text-sm">© BaroiBazaar</p>
+        <div class="flex space-x-6">
+            <a href="https://www.instagram.com/baroi.ai/" target="_blank" class="text-teal-300 hover:text-white"><svg
+                    class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.343 2.525c.636-.247 1.363.416 2.427-.465C9.793 2.013 10.147 2 12.315 2zm0 1.622c-2.403 0-2.748.01-3.725.058-.948.045-1.542.208-2.068.42a3.287 3.287 0 00-1.18 1.18c-.212.526-.375 1.12-.42 2.068-.048.977-.058 1.322-.058 3.725s.01 2.748.058 3.725c.045.948.208 1.542.42 2.068a3.287 3.287 0 001.18 1.18c.526.212 1.12.375 2.068.42.977.048 1.322.058 3.725.058s2.748-.01 3.725-.058c.948-.045 1.542-.208 2.068-.42a3.287 3.287 0 001.18-1.18c.212-.526-.375-1.12.42-2.068.048-.977.058-1.322.058-3.725s-.01-2.748-.058-3.725c-.045-.948-.208-1.542-.42-2.068a3.287 3.287 0 00-1.18-1.18c-.526-.212-1.12-.375-2.068-.42-.977-.048-1.322-.058-3.725-.058zM12 8.118a3.882 3.882 0 100 7.764 3.882 3.882 0 000-7.764zm0 6.138a2.256 2.256 0 110-4.512 2.256 2.256 0 010 4.512zM16.882 6.118a.952.952 0 100 1.904 .952.952 0 000-1.904z"
+                        clip-rule="evenodd" />
+                </svg></a>
+            <a href="https://www.youtube.com/@baroi_ai" class="text-teal-300 hover:text-white"><svg class="w-6 h-6"
+                    fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.78 22 12 22 12s0 3.22-.42 4.814a2.506 2.506 0 01-1.768 1.768c-1.594.42-7.812.42-7.812.42s-6.218 0-7.812-.42a2.506 2.506 0 01-1.768-1.768C2 15.22 2 12 2 12s0-3.22.42-4.814a2.506 2.506 0 011.768-1.768C5.782 5 12 5 12 5s6.218 0 7.812.418zM9.75 15.5V8.5l6 3.5-6 3.5z"
+                        clip-rule="evenodd" />
+                </svg></a>
+        </div>
+    </footer>
+
+    <!-- JavaScript to toggle mobile menu AND handle search functionality -->
+    <script>
+        // --- Mobile Menu Toggle ---
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Search Functionality ---
+        const searchInput = document.getElementById('search-input');
+        const productCards = document.querySelectorAll('.product-card');
+        const noResultsMessage = document.getElementById('no-results-message');
+        const productsGrid = document.getElementById('products-grid');
+
+        searchInput.addEventListener('keyup', (event) => {
+            const searchTerm = event.target.value.toLowerCase();
+            let productsFound = 0;
+
+            productCards.forEach(card => {
+                const productName = card.querySelector('h3').textContent.toLowerCase();
+
+                if (productName.includes(searchTerm)) {
+                    card.style.display = 'flex'; // Use 'flex' to match original styling
+                    productsFound++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show or hide the 'no results' message
+            if (productsFound === 0) {
+                noResultsMessage.classList.remove('hidden');
+                productsGrid.classList.add('hidden'); // Also hide the grid container
+            } else {
+                noResultsMessage.classList.add('hidden');
+                productsGrid.classList.remove('hidden'); // Ensure grid is visible
+            }
+        });
+    </script>
+
+</body>
+
+</html>
